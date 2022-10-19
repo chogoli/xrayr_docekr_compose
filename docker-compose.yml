@@ -6,3 +6,7 @@ services:
       - ./config:/etc/XrayR/ # 映射配置文件夹
     restart: always
     network_mode: host
+    logging:
+    driver: "json-file"
+      options:
+        max-size: "50m"
